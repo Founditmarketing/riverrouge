@@ -17,42 +17,15 @@ export default function TwoPath() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          {/* Residential */}
-          <motion.div 
-            whileHover={{ y: -10 }}
-            className="group relative overflow-hidden rounded-3xl bg-white shadow-2xl shadow-black/5"
-          >
-            <div className="aspect-[4/3] overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" 
-                alt="Residential Millwork" 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-            <div className="p-10 lg:p-12">
-              <div className="w-14 h-14 rounded-full bg-[var(--color-cloud)] flex items-center justify-center mb-8 text-[var(--color-cypress)]">
-                <Home className="w-6 h-6" />
-              </div>
-              <h3 className="font-serif text-3xl lg:text-4xl text-[var(--color-walnut)] mb-4">For Homeowners</h3>
-              <p className="text-[var(--color-ink)]/70 mb-10 leading-relaxed font-light text-lg">
-                Bespoke cabinetry, historic preservation, and custom trim that turns a house into a legacy. We work directly with you to realize your vision.
-              </p>
-              <button className="flex items-center gap-3 text-[var(--color-cypress)] font-medium tracking-[0.2em] uppercase text-xs hover:text-[var(--color-walnut)] transition-colors">
-                Residential Portfolio <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </motion.div>
-
           {/* Commercial */}
-          <motion.div 
+          <motion.div
             whileHover={{ y: -10 }}
             className="group relative overflow-hidden rounded-3xl bg-[var(--color-walnut)] text-white shadow-2xl shadow-black/10"
           >
             <div className="aspect-[4/3] overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
-                alt="Commercial Millwork" 
+              <img
+                src="/commercial_conference_table_1773142338938.png"
+                alt="Commercial Millwork"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80"
                 referrerPolicy="no-referrer"
               />
@@ -67,6 +40,33 @@ export default function TwoPath() {
               </p>
               <button className="flex items-center gap-3 text-[var(--color-cypress)] font-medium tracking-[0.2em] uppercase text-xs hover:text-white transition-colors">
                 Commercial Capabilities <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Residential */}
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="group relative overflow-hidden rounded-3xl bg-white shadow-2xl shadow-black/5"
+          >
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+                alt="Residential Millwork"
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div className="p-10 lg:p-12">
+              <div className="w-14 h-14 rounded-full bg-[var(--color-cloud)] flex items-center justify-center mb-8 text-[var(--color-cypress)]">
+                <Home className="w-6 h-6" />
+              </div>
+              <h3 className="font-serif text-3xl lg:text-4xl text-[var(--color-walnut)] mb-4">For Homeowners</h3>
+              <p className="text-[var(--color-ink)]/70 mb-10 leading-relaxed font-light text-lg">
+                Bespoke cabinetry, historic preservation, and custom trim that turns a house into a legacy. We work directly with you to realize your vision.
+              </p>
+              <button className="flex items-center gap-3 text-[var(--color-cypress)] font-medium tracking-[0.2em] uppercase text-xs hover:text-[var(--color-walnut)] transition-colors">
+                Residential Portfolio <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </motion.div>

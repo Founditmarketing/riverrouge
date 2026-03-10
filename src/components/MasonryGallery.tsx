@@ -7,58 +7,58 @@ const categories = ['All', 'Residential', 'Commercial', 'Restoration', 'Process'
 const galleryImages = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop',
-    category: 'Residential',
-    title: 'Walnut Kitchen Estate',
+    src: '/commercial_conference_table_1773142338938.png',
+    category: 'Commercial',
+    title: 'Executive Boardroom',
     span: 'md:col-span-2 md:row-span-2',
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop',
+    src: '/medical_waiting_room_1773142489302.png',
     category: 'Commercial',
-    title: 'Corporate Boardroom Paneling',
+    title: 'Luxury Clinic Environment',
     span: 'md:col-span-1 md:row-span-1',
   },
   {
     id: 3,
     src: 'https://images.unsplash.com/photo-1600566753086-00f18efc2291?q=80&w=2070&auto=format&fit=crop',
     category: 'Restoration',
-    title: '19th Century Staircase',
+    title: 'Historic Restoration Details',
     span: 'md:col-span-1 md:row-span-2',
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=2000&auto=format&fit=crop',
-    category: 'Process',
-    title: 'Hand-cut Dovetails',
+    src: '/architectural_wood_slats_1773142351633.png',
+    category: 'Commercial',
+    title: 'Acoustic Slat Paneling',
     span: 'md:col-span-1 md:row-span-1',
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop',
-    category: 'Residential',
-    title: 'Custom Mahogany Entryway',
+    src: '/dental_operatory_millwork_1773142501114.png',
+    category: 'Commercial',
+    title: 'Advanced Dental Operatory',
     span: 'md:col-span-2 md:row-span-1',
   },
   {
     id: 6,
     src: 'https://images.unsplash.com/photo-1610505466025-533bb320576e?q=80&w=2940&auto=format&fit=crop',
     category: 'Process',
-    title: 'Raw Cypress Selection',
+    title: 'Walnut Material Selection',
     span: 'md:col-span-1 md:row-span-1',
   },
   {
     id: 7,
-    src: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=2070&auto=format&fit=crop',
-    category: 'Residential',
-    title: 'Modern Oak Cabinetry',
+    src: '/medical_reception_desk_1773142472519.png',
+    category: 'Commercial',
+    title: 'Orthopedic Reception Desk',
     span: 'md:col-span-1 md:row-span-1',
   },
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1582879304171-82fd81eb1622?q=80&w=2000&auto=format&fit=crop',
+    src: '/commercial_lobby_millwork_1773142325668.png',
     category: 'Commercial',
-    title: 'Boutique Hotel Lobby',
+    title: 'Corporate Headquarters Lobby',
     span: 'md:col-span-2 md:row-span-1',
   },
 ];
@@ -81,18 +81,17 @@ export default function MasonryGallery() {
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[var(--color-walnut)] mb-12">
             A Legacy in Wood.
           </h2>
-          
+
           {/* Filter Navigation */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-8">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`text-xs tracking-[0.2em] uppercase transition-all duration-300 pb-2 border-b-2 ${
-                  activeCategory === category
+                className={`text-xs tracking-[0.2em] uppercase transition-all duration-300 pb-2 border-b-2 ${activeCategory === category
                     ? 'border-[var(--color-cypress)] text-[var(--color-walnut)] font-medium'
                     : 'border-transparent text-gray-400 hover:text-[var(--color-walnut)]'
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -101,7 +100,7 @@ export default function MasonryGallery() {
         </div>
 
         {/* Masonry Grid */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[250px]"
         >

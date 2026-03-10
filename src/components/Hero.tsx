@@ -9,7 +9,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1610505466025-533bb320576e?q=80&w=2940&auto=format&fit=crop")',
+          backgroundImage: 'url("/commercial_lobby_millwork_1773142325668.png")',
           backgroundAttachment: 'fixed'
         }}
       >
@@ -25,12 +25,12 @@ export default function Hero() {
           <span className="text-[var(--color-cypress)] text-xs md:text-sm tracking-[0.3em] uppercase mb-8 block font-medium">
             Alexandria, Louisiana
           </span>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-tight mb-8 max-w-5xl mx-auto">
-            Nature Distilled into <br className="hidden md:block" />
-            <span className="italic text-[var(--color-cypress)]">Precision Craftsmanship.</span>
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-8 max-w-5xl mx-auto">
+            Engineering Excellence in <br className="hidden md:block" />
+            <span className="italic text-[var(--color-cypress)]">Commercial Millwork.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-            From raw, heritage lumber to bespoke architectural millwork. We engineer legacy pieces for spaces that demand perfection.
+            From striking corporate lobbies to state-of-the-art medical and professional facilities. We engineer large-scale, precision architectural millwork for spaces that demand perfection.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

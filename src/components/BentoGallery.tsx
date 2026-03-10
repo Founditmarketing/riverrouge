@@ -20,61 +20,61 @@ export default function BentoGallery() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px] md:auto-rows-[400px]">
-          {/* Custom Cabinets - Large */}
+          {/* Advanced Dental Operatory - Large */}
           <div className="group relative rounded-3xl overflow-hidden md:col-span-2 md:row-span-2">
-            <img 
-              src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=2070&auto=format&fit=crop" 
-              alt="Custom Kitchen Cabinetry" 
+            <img
+              src="/dental_operatory_millwork_1773142501114.png"
+              alt="Advanced Dental Operatory"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
-              <span className="text-[var(--color-cypress)] text-xs tracking-[0.2em] uppercase mb-3">Residential</span>
-              <h3 className="font-serif text-3xl lg:text-4xl text-white mb-3">Bespoke Kitchen Cabinetry</h3>
-              <p className="text-white/70 font-light max-w-md text-lg">Solid walnut construction with precision dovetail joinery, designed for a historic estate.</p>
+              <span className="text-[var(--color-cypress)] text-xs tracking-[0.2em] uppercase mb-3">Commercial • Medical</span>
+              <h3 className="font-serif text-3xl lg:text-4xl text-white mb-3">Advanced Dental Operatory</h3>
+              <p className="text-white/70 font-light max-w-md text-lg">Sterile, custom-built medical cabinetry blending high-performance functionality with sleek, modern aesthetics.</p>
             </div>
           </div>
 
-          {/* Historic Preservation */}
+          {/* Medical Reception */}
           <div className="group relative rounded-3xl overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1600566753086-00f18efc2291?q=80&w=2070&auto=format&fit=crop" 
-              alt="Historic Preservation" 
+            <img
+              src="/medical_reception_desk_1773142472519.png"
+              alt="Medical Reception Desk"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
-              <span className="text-[var(--color-cypress)] text-xs tracking-[0.2em] uppercase mb-2">Restoration</span>
-              <h3 className="font-serif text-2xl text-white">Historic Preservation</h3>
+              <span className="text-[var(--color-cypress)] text-xs tracking-[0.2em] uppercase mb-2">Commercial</span>
+              <h3 className="font-serif text-2xl text-white">Medical Reception</h3>
             </div>
           </div>
 
-          {/* Doors & Entryways */}
+          {/* Architectural Slats */}
           <div className="group relative rounded-3xl overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop" 
-              alt="Custom Doors" 
+            <img
+              src="/architectural_wood_slats_1773142351633.png"
+              alt="Architectural Acoustic Details"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
               <span className="text-[var(--color-cypress)] text-xs tracking-[0.2em] uppercase mb-2">Architectural</span>
-              <h3 className="font-serif text-2xl text-white">Custom Entryways</h3>
+              <h3 className="font-serif text-2xl text-white">Acoustic Details</h3>
             </div>
           </div>
-          
-          {/* Commercial Millwork */}
+
+          {/* Luxury Waiting Room */}
           <div className="group relative rounded-3xl overflow-hidden md:col-span-3 h-[400px]">
-             <img 
-              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop" 
-              alt="Commercial Millwork" 
+            <img
+              src="/medical_waiting_room_1773142489302.png"
+              alt="Luxury Medical Waiting Room"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
-              <span className="text-[var(--color-cypress)] text-xs tracking-[0.2em] uppercase mb-3">Commercial</span>
-              <h3 className="font-serif text-3xl lg:text-4xl text-white mb-3">Corporate Headquarters</h3>
-              <p className="text-white/70 font-light max-w-xl text-lg">Acoustic wood paneling and custom reception desks for modern office environments.</p>
+              <span className="text-[var(--color-cypress)] text-xs tracking-[0.2em] uppercase mb-3">Commercial • Medical</span>
+              <h3 className="font-serif text-3xl lg:text-4xl text-white mb-3">Professional Waiting Environment</h3>
+              <p className="text-white/70 font-light max-w-xl text-lg">Warm, luxurious walnut paneling transforming the clinical waiting experience into a high-end, comfortable environment for patients.</p>
             </div>
           </div>
 
