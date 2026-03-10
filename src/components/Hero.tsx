@@ -6,10 +6,10 @@ export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[var(--color-walnut)]">
       {/* Background Image with Parallax effect */}
-      <div 
+      <div
         className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ 
-          backgroundImage: 'url("/commercial_lobby_millwork_1773142325668.png")',
+        style={{
+          backgroundImage: 'url("/modern_commercial_hero.png")',
           backgroundAttachment: 'fixed'
         }}
       >
@@ -32,7 +32,7 @@ export default function Hero() {
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
             From striking corporate lobbies to state-of-the-art medical and professional facilities. We engineer large-scale, precision architectural millwork for spaces that demand perfection.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <button className="group flex items-center justify-center gap-3 bg-[var(--color-cypress)] text-white px-8 py-4 rounded-full text-xs tracking-[0.2em] uppercase transition-all hover:bg-white hover:text-[var(--color-walnut)] w-full sm:w-auto">
               Explore Our Work
@@ -44,9 +44,9 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-      
+
       {/* Scroll indicator */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-white/50"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

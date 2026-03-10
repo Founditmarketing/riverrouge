@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import TwoPath from './components/TwoPath';
 import BentoGallery from './components/BentoGallery';
-import MasonryGallery from './components/MasonryGallery';
 import BeforeAfter from './components/BeforeAfter';
 import SpeciesGuide from './components/SpeciesGuide';
 import Process from './components/Process';
@@ -18,7 +17,6 @@ export default function App() {
         <Hero />
         <TwoPath />
         <BentoGallery />
-        <MasonryGallery />
         <BeforeAfter />
         <SpeciesGuide />
         <Process />
