@@ -7,37 +7,37 @@ const categories = ['All', 'Residential', 'Commercial', 'Restoration', 'Process'
 const galleryImages = [
   {
     id: 1,
-    src: '/commercial_conference_table_1773142338938.png',
+    src: '/live_commercial_lighting.png',
     category: 'Commercial',
-    title: 'Executive Boardroom',
+    title: 'Modern Corporate Millwork',
     span: 'md:col-span-2 md:row-span-2',
   },
   {
     id: 2,
-    src: '/medical_waiting_room_1773142489302.png',
-    category: 'Commercial',
-    title: 'Luxury Clinic Environment',
+    src: '/live_custom_cabinetry_1.jpeg',
+    category: 'Residential',
+    title: 'Custom Kitchen Cabinetry',
     span: 'md:col-span-1 md:row-span-1',
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1600566753086-00f18efc2291?q=80&w=2070&auto=format&fit=crop',
+    src: '/live_handcrafted_door.jpeg',
     category: 'Restoration',
-    title: 'Historic Restoration Details',
+    title: 'Custom Entryways & Doors',
     span: 'md:col-span-1 md:row-span-2',
   },
   {
     id: 4,
-    src: '/architectural_wood_slats_1773142351633.png',
-    category: 'Commercial',
-    title: 'Acoustic Slat Paneling',
+    src: '/live_custom_cabinetry_2.jpeg',
+    category: 'Residential',
+    title: 'Cabinetry Details',
     span: 'md:col-span-1 md:row-span-1',
   },
   {
     id: 5,
-    src: '/dental_operatory_millwork_1773142501114.png',
+    src: '/live_medical_breakroom.png',
     category: 'Commercial',
-    title: 'Advanced Dental Operatory',
+    title: 'Clinic Cabinets',
     span: 'md:col-span-2 md:row-span-1',
   },
   {
@@ -49,9 +49,9 @@ const galleryImages = [
   },
   {
     id: 7,
-    src: '/medical_reception_desk_1773142472519.png',
+    src: '/live_office_cabinets.png',
     category: 'Commercial',
-    title: 'Orthopedic Reception Desk',
+    title: 'Executive Office Cabinets',
     span: 'md:col-span-1 md:row-span-1',
   },
   {
@@ -89,8 +89,8 @@ export default function MasonryGallery() {
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 className={`text-xs tracking-[0.2em] uppercase transition-all duration-300 pb-2 border-b-2 ${activeCategory === category
-                    ? 'border-[var(--color-cypress)] text-[var(--color-walnut)] font-medium'
-                    : 'border-transparent text-gray-400 hover:text-[var(--color-walnut)]'
+                  ? 'border-[var(--color-cypress)] text-[var(--color-walnut)] font-medium'
+                  : 'border-transparent text-gray-400 hover:text-[var(--color-walnut)]'
                   }`}
               >
                 {category}
