@@ -42,9 +42,9 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1610505466025-533bb320576e?q=80&w=2940&auto=format&fit=crop',
+    src: '/live_workshop_wip.png',
     category: 'Process',
-    title: 'Walnut Material Selection',
+    title: 'Workshop In-Progress',
     span: 'md:col-span-1 md:row-span-1',
   },
   {
@@ -56,10 +56,52 @@ const galleryImages = [
   },
   {
     id: 8,
-    src: '/commercial_lobby_millwork_1773142325668.png',
+    src: '/live_commercial_medical_entry.png',
     category: 'Commercial',
-    title: 'Corporate Headquarters Lobby',
+    title: 'Medical Office Entryway',
     span: 'md:col-span-2 md:row-span-1',
+  },
+  {
+    id: 9,
+    src: '/live_medical_dental_exam.png',
+    category: 'Commercial',
+    title: 'Dental Exam Room Cabinetry',
+    span: 'md:col-span-1 md:row-span-2',
+  },
+  {
+    id: 10,
+    src: '/live_coffee_shop_counter.jpg',
+    category: 'Commercial',
+    title: 'Custom Coffee Shop Counter',
+    span: 'md:col-span-2 md:row-span-2',
+  },
+  {
+    id: 11,
+    src: '/live_handcrafted_workshop_detail.jpeg',
+    category: 'Process',
+    title: 'Handcrafted Assembly',
+    span: 'md:col-span-1 md:row-span-1',
+  },
+  {
+    id: 12,
+    src: '/live_large_office_storage.png',
+    category: 'Commercial',
+    title: 'Corporate Office Storage',
+    span: 'md:col-span-1 md:row-span-1',
+  },
+  {
+    id: 13,
+    src: '/live_commercial_reception_desk.png',
+    category: 'Commercial',
+    title: 'Custom Reception Desk',
+    span: 'md:col-span-2 md:row-span-1',
+  },
+  {
+    id: 14,
+    src: '/live_medical_commercial_cabinetry.png',
+    category: 'Commercial',
+    title: 'Professional Medical Cabinetry',
+    span: 'md:col-span-1 md:row-span-1',
   },
 ];
 
