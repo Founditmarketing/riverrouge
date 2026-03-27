@@ -1,4 +1,6 @@
 import React from 'react';
+import { ArrowRight, Ruler, PenTool, CheckCircle, Clock } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const steps = [
   {
@@ -27,14 +29,20 @@ export default function Process() {
   return (
     <section className="py-32 bg-white" id="process">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-24">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-24"
+        >
           <span className="text-[var(--color-cypress)] text-xs tracking-[0.3em] uppercase mb-4 block font-medium">
             Our Methodology
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[var(--color-walnut)]">
             From Forest to Floor.
           </h2>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-4 gap-8 md:gap-12 relative z-0 mt-8">
           {/* Connecting Line */}

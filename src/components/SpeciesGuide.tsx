@@ -41,12 +41,19 @@ export default function SpeciesGuide() {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
 
           <div className="w-full lg:w-1/2">
-            <span className="text-[var(--color-cypress)] text-xs tracking-[0.3em] uppercase mb-4 block font-medium">
-              Material Selection
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[var(--color-walnut)] mb-12">
-              The Language <br /> of Grain.
-            </h2>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-[var(--color-cypress)] text-xs tracking-[0.3em] uppercase mb-4 block font-medium">
+                Material Selection
+              </span>
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[var(--color-walnut)] mb-12">
+                The Language <br /> of Grain.
+              </h2>
+            </motion.div>
 
             <div className="space-y-6">
               {species.map((s) => (

@@ -49,15 +49,21 @@ export default function BeforeAfter() {
         style={{ backgroundImage: 'url("/black_walnut_texture.png")', y: backgroundY }}
       ></motion.div>
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
           <span className="text-[var(--color-cypress)] text-xs tracking-[0.3em] uppercase mb-4 block font-medium">
             Historic Preservation
           </span>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6">Restoring the Past.</h2>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6">Restoring the Past.</h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg font-light">
             We breathe new life into historic millwork, matching original profiles and species to preserve architectural heritage.
           </p>
-        </div>
+        </motion.div>
 
         <div
           ref={containerRef}

@@ -6,7 +6,13 @@ export default function TwoPath() {
   return (
     <section className="py-32 bg-[var(--color-cloud)]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
+        >
           <span className="text-[var(--color-cypress)] text-xs tracking-[0.3em] uppercase mb-4 block font-medium">
             Our Expertise
           </span>
@@ -14,7 +20,7 @@ export default function TwoPath() {
           <p className="text-[var(--color-ink)]/70 max-w-2xl mx-auto text-lg font-light">
             Whether you are crafting a legacy home or outfitting a commercial space, our approach adapts to the scale and precision your project demands.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {/* Commercial */}
