@@ -25,7 +25,7 @@ export default function Preloader() {
           className="fixed inset-0 z-[100] bg-[var(--color-walnut)] flex flex-col items-center justify-center overflow-hidden"
         >
           {/* Subtle wood texture background overlay */}
-          <div 
+          <div
             className="absolute inset-0 opacity-10 mix-blend-overlay"
             style={{ backgroundImage: 'url("/black_walnut_texture.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
           ></div>
@@ -38,29 +38,41 @@ export default function Preloader() {
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
               className="flex flex-col items-center mb-12"
             >
-              <img 
-                src="/riverrougenewlogowithnowords.png" 
-                alt="River Rouge Shield" 
+              <img
+                src="/riverrougenewlogowithnowords.png"
+                alt="River Rouge Shield"
                 className="h-12 md:h-16 w-auto invert drop-shadow-2xl mb-3"
               />
-              <h1 className="font-serif text-3xl md:text-4xl text-white tracking-[0.15em] uppercase text-center mb-2">
-                River Rouge
-              </h1>
+              {/* Static Text & Animated Line Loader */}
+              <div className="relative inline-block mb-4">
+                <motion.h1
+                  className="font-serif text-3xl md:text-4xl tracking-[0.15em] uppercase text-center relative z-10"
+                  style={{
+                    backgroundImage: "linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.4) 100%)",
+                    backgroundSize: "200% auto",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent"
+                  }}
+                  animate={{ backgroundPosition: ["200% center", "-200% center"] }}
+                  transition={{ duration: 2.2, delay: 0.3, ease: "easeInOut" }}
+                >
+                  River Rouge
+                </motion.h1>
+
+                {/* Elegant Center-Origin Underline */}
+                <motion.div
+                  className="absolute -bottom-2 md:-bottom-3 left-0 right-0 h-[1px] bg-white/40 origin-center"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 1.8, delay: 0.5, ease: "easeInOut" }}
+                />
+              </div>
+
               <h2 className="text-[var(--color-cypress)] tracking-[0.3em] uppercase text-[10px] md:text-xs font-bold text-center">
                 Millwork, LLC
               </h2>
             </motion.div>
 
-            {/* Elegant Loading Bar */}
-            <div className="w-56 md:w-72 h-[1px] bg-white/20 relative overflow-hidden">
-              <motion.div
-                className="absolute top-0 left-0 bottom-0 bg-[var(--color-cypress)]"
-                initial={{ width: "0%" }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1.8, delay: 0.5, ease: "easeInOut" }}
-              ></motion.div>
-            </div>
-            
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

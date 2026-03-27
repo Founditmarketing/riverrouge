@@ -66,30 +66,31 @@ export default function FloatingQuote() {
             >
               {/* Close Button */}
               <button 
+                type="button"
                 onClick={closeForm}
-                className="absolute top-6 right-6 text-gray-400 hover:text-[var(--color-walnut)] transition-colors"
+                className="absolute top-4 right-4 md:top-6 md:right-6 text-gray-400 hover:text-[var(--color-walnut)] transition-colors z-50 p-2 bg-white/80 rounded-full"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 md:w-6 md:h-6" />
               </button>
 
-              <div className="p-8 md:p-12">
-                <div className="text-center mb-10">
-                  <span className="text-[var(--color-cypress)] text-xs tracking-[0.3em] uppercase mb-2 block font-medium">
+              <div className="p-6 pt-12 md:p-12">
+                <div className="text-center mb-8 md:mb-10">
+                  <span className="text-[var(--color-cypress)] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-2 block font-medium">
                     Consultation
                   </span>
-                  <h2 className="font-serif text-3xl md:text-4xl text-[var(--color-walnut)]">The Craftsman's Quote</h2>
+                  <h2 className="font-serif text-2xl md:text-4xl text-[var(--color-walnut)]">The Craftsman's Quote</h2>
                 </div>
 
                 {/* Progress Bar */}
                 {step < 5 && (
-                  <div className="flex gap-2 mb-10">
+                  <div className="flex gap-2 mb-8 md:mb-10">
                     {[1, 2, 3, 4].map((i) => (
                       <div key={i} className={`h-1 flex-1 rounded-full transition-colors duration-500 ${i <= step ? 'bg-[var(--color-cypress)]' : 'bg-gray-200'}`} />
                     ))}
                   </div>
                 )}
 
-                <div className="min-h-[300px] flex flex-col justify-center">
+                <div className="min-h-[200px] md:min-h-[300px] flex flex-col justify-center">
                   <AnimatePresence mode="wait">
                     {step === 1 && (
                       <motion.div
