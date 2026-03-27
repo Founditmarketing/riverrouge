@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 let initialHeroMount = true;
 
 export default function Hero() {
-  const [delay] = useState(initialHeroMount ? 4.5 : 0.2);
+  const [delay] = useState(initialHeroMount ? 3.8 : 0.2);
 
   useEffect(() => {
     initialHeroMount = false;

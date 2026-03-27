@@ -26,7 +26,7 @@ let initialHeaderMount = true;
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [delay] = useState(initialHeaderMount ? 4.5 : 0);
+  const [delay] = useState(initialHeaderMount ? 3.8 : 0);
   
   const location = useLocation();
   const isConsultation = location.pathname === '/consultation';
