@@ -41,18 +41,19 @@ export default function Header() {
   }, []);
 
   return (
-    <motion.header
-      initial={{ opacity: initialHeaderMount ? 0 : 1, y: initialHeaderMount ? -20 : 0 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}
-    >
-      <div className={`w-full px-6 flex justify-between ${isScrolled ? 'items-center' : 'items-start'}`}>
-        <a href="/" className="flex items-center gap-2 relative z-50 hover:opacity-80 transition-opacity">
+    <>
+      <motion.header
+        initial={{ opacity: initialHeaderMount ? 0 : 1, y: initialHeaderMount ? -20 : 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}
+      >
+        <div className={`w-full px-6 flex justify-between ${isScrolled ? 'items-center' : 'items-start'}`}>
+        <a href="/" className="flex items-center gap-2 relative z-50 hover:opacity-80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
           <img 
             src="/riverrougenewlogo.png" 
             alt="River Rouge" 
-            className={`w-auto transition-all duration-500 ${isScrolled ? 'h-8 md:h-10' : 'h-14 md:h-24 invert'}`}
+            className={`w-auto transition-all duration-500 ${(isScrolled || isMobileMenuOpen) ? 'h-8 md:h-10' : 'h-14 md:h-24 invert'}`}
           />
         </a>
         
@@ -79,10 +80,11 @@ export default function Header() {
           </a>
         </nav>
 
-        <button className={`md:hidden text-current relative z-50 ${isScrolled ? '' : 'mt-0'}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <X className={isScrolled || isMobileMenuOpen ? 'text-[var(--color-ink)]' : 'text-white'} /> : <Menu className={isScrolled ? 'text-[var(--color-ink)]' : 'text-white'} />}
+        <button className={`md:hidden text-current relative z-50 ${(isScrolled || isMobileMenuOpen) ? '' : 'mt-0'}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {isMobileMenuOpen ? <X className={(isScrolled || isMobileMenuOpen) ? 'text-[var(--color-ink)]' : 'text-white'} /> : <Menu className={isScrolled ? 'text-[var(--color-ink)]' : 'text-white'} />}
         </button>
       </div>
+    </motion.header>
       
       {/* Mobile Menu */}
       <div className={`md:hidden fixed inset-0 bg-white z-40 transition-all duration-500 flex flex-col pt-24 ${isMobileMenuOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible pointer-events-none'}`}>
@@ -108,6 +110,6 @@ export default function Header() {
           </a>
         </div>
       </div>
-    </motion.header>
+    </>
   );
 }
