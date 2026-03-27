@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import TwoPath from './components/TwoPath';
@@ -20,6 +20,27 @@ import HeritagePage from './pages/HeritagePage';
 import ConsultationPage from './pages/ConsultationPage';
 import Preloader from './components/Preloader';
 import FloatingQuote from './components/FloatingQuote';
+
+function GlobalClickHandler() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest('a');
+      if (target && target.href && !target.hasAttribute('target')) {
+        const hrefData = target.getAttribute('href');
+        // Only intercept absolute root-relative internal links
+        if (hrefData && hrefData.startsWith('/') && !hrefData.startsWith('//')) {
+          e.preventDefault();
+          navigate(hrefData);
+          window.scrollTo(0, 0);
+        }
+      }
+    };
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, [navigate]);
+  return null;
+}
 
 function HomePage() {
   return (
@@ -44,6 +65,7 @@ export default function App() {
     <>
       <Preloader />
       <Router>
+        <GlobalClickHandler />
         <FloatingQuote />
         <Routes>
         <Route path="/" element={<HomePage />} />
