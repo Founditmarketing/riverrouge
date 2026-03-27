@@ -36,7 +36,7 @@ export default function Preloader() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-              className="flex flex-col items-center mb-12"
+              className="flex flex-col items-center mb-0"
             >
               <img
                 src="/riverrougenewlogowithnowords.png"
@@ -77,7 +77,7 @@ export default function Preloader() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="flex flex-col items-center mt-8"
+              className="flex flex-col items-center mt-6"
             >
               <p className="text-white/70 font-medium text-[10px] md:text-xs uppercase tracking-[0.15em] text-center leading-loose md:leading-normal">
                 <span className="block md:inline">Exceptional Craftsmanship.</span>
