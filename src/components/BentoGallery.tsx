@@ -28,10 +28,10 @@ export default function BentoGallery() {
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
-              <span className="text-[var(--color-cypress)] text-xs tracking-[0.2em] uppercase mb-3">Commercial</span>
-              <h3 className="font-serif text-3xl lg:text-4xl text-white mb-3">Modern Corporate Millwork</h3>
-              <p className="text-white/70 font-light max-w-md text-lg">Integrated architectural lighting and custom wood paneling designed for professional environments.</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-10">
+              <span className="text-[var(--color-cypress)] text-[10px] md:text-xs tracking-[0.2em] uppercase mb-2 md:mb-3">Commercial</span>
+              <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl text-white md:mb-3">Modern Corporate Millwork</h3>
+              <p className="hidden md:block text-white/70 font-light max-w-md text-lg mt-3 md:mt-0">Integrated architectural lighting and custom wood paneling designed for professional environments.</p>
             </div>
           </a>
 
