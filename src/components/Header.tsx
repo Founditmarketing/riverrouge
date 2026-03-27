@@ -89,13 +89,13 @@ export default function Header() {
         <div className="flex flex-col px-6 gap-6 overflow-y-auto pb-12">
           {navItems.map((item) => (
             <div key={item.name} className="flex flex-col border-b border-gray-100 pb-4">
-              <a href={item.href} className="text-3xl font-serif text-[var(--color-walnut)]" onClick={() => !item.submenu && setIsMobileMenuOpen(false)}>
+              <a href={item.href} className="text-2xl font-serif text-[var(--color-walnut)]" onClick={() => !item.submenu && setIsMobileMenuOpen(false)}>
                 {item.name}
               </a>
               {item.submenu && (
                 <div className="flex flex-col pl-4 mt-4 gap-4">
                   {item.submenu.map((subItem) => (
-                    <a key={subItem.name} href={subItem.href} className="text-sm tracking-[0.1em] uppercase text-[var(--color-ink)]/60 hover:text-[var(--color-cypress)]" onClick={() => setIsMobileMenuOpen(false)}>
+                    <a key={subItem.name} href={subItem.href} className="text-xs tracking-[0.15em] uppercase text-[var(--color-ink)]/60 hover:text-[var(--color-cypress)]" onClick={() => setIsMobileMenuOpen(false)}>
                       {subItem.name}
                     </a>
                   ))}
@@ -103,9 +103,9 @@ export default function Header() {
               )}
             </div>
           ))}
-          <button className="mt-8 px-6 py-4 bg-[var(--color-walnut)] text-white rounded-full text-xs tracking-[0.2em] uppercase font-medium w-full text-center">
+          <a href="/consultation" className="mt-8 px-6 py-4 bg-[var(--color-walnut)] text-white rounded-full text-xs tracking-[0.2em] uppercase font-medium w-full text-center" onClick={() => setIsMobileMenuOpen(false)}>
             Consultation
-          </button>
+          </a>
         </div>
       </div>
     </motion.header>

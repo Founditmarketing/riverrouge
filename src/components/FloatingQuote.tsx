@@ -62,20 +62,23 @@ export default function FloatingQuote() {
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 50, scale: 0.95 }}
-              className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl my-auto"
+              className="relative w-full max-w-2xl bg-white rounded-[2rem] shadow-2xl my-auto max-h-[85vh] overflow-y-auto"
             >
-              {/* Close Button */}
-              <button 
-                type="button"
-                onClick={closeForm}
-                className="absolute top-4 right-4 md:top-6 md:right-6 text-gray-400 hover:text-[var(--color-walnut)] transition-colors z-50 p-2 bg-white/80 rounded-full"
-              >
-                <X className="w-5 h-5 md:w-6 md:h-6" />
-              </button>
+              {/* Close Button Structure */}
+              <div className="absolute top-2 right-2 md:top-6 md:right-6 z-50">
+                <button 
+                  type="button"
+                  onClick={closeForm}
+                  className="p-4 text-gray-400 hover:text-black transition-colors"
+                  aria-label="Close form"
+                >
+                  <X className="w-6 h-6 md:w-6 md:h-6" />
+                </button>
+              </div>
 
-              <div className="p-6 pt-12 md:p-12">
-                <div className="text-center mb-8 md:mb-10">
-                  <span className="text-[var(--color-cypress)] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-2 block font-medium">
+              <div className="p-5 pt-14 md:p-12">
+                <div className="text-center mb-6 md:mb-10">
+                  <span className="text-[var(--color-cypress)] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-1 block font-medium">
                     Consultation
                   </span>
                   <h2 className="font-serif text-2xl md:text-4xl text-[var(--color-walnut)]">The Craftsman's Quote</h2>
@@ -83,14 +86,14 @@ export default function FloatingQuote() {
 
                 {/* Progress Bar */}
                 {step < 5 && (
-                  <div className="flex gap-2 mb-8 md:mb-10">
+                  <div className="flex gap-1.5 md:gap-2 mb-6 md:mb-10">
                     {[1, 2, 3, 4].map((i) => (
                       <div key={i} className={`h-1 flex-1 rounded-full transition-colors duration-500 ${i <= step ? 'bg-[var(--color-cypress)]' : 'bg-gray-200'}`} />
                     ))}
                   </div>
                 )}
 
-                <div className="min-h-[200px] md:min-h-[300px] flex flex-col justify-center">
+                <div className="min-h-[auto] md:min-h-[300px] flex flex-col justify-center">
                   <AnimatePresence mode="wait">
                     {step === 1 && (
                       <motion.div
@@ -99,13 +102,14 @@ export default function FloatingQuote() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
                       >
-                        <h3 className="font-serif text-2xl text-[var(--color-walnut)] mb-6 text-center">What type of project are you planning?</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <h3 className="font-serif text-xl md:text-2xl text-[var(--color-walnut)] mb-4 md:mb-6 text-center">What type of project are you planning?</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
                           {['Custom Cabinetry', 'Historic Preservation', 'Commercial Millwork', 'Doors & Entryways', 'Architectural Trim', 'Other'].map((type) => (
                             <button
                               key={type}
+                              type="button"
                               onClick={() => { setFormData({ ...formData, projectType: type }); nextStep(); }}
-                              className={`p-4 text-sm text-left rounded-xl border transition-all ${formData.projectType === type ? 'border-[var(--color-cypress)] bg-[var(--color-cloud)]' : 'border-gray-200 hover:border-[var(--color-cypress)]'}`}
+                              className={`p-3 md:p-4 text-xs md:text-sm text-left rounded-xl border transition-all ${formData.projectType === type ? 'border-[var(--color-cypress)] bg-[var(--color-cloud)]' : 'border-gray-200 hover:border-[var(--color-cypress)]'}`}
                             >
                               <span className="font-medium text-[var(--color-ink)]">{type}</span>
                             </button>
@@ -121,19 +125,20 @@ export default function FloatingQuote() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
                       >
-                        <h3 className="font-serif text-2xl text-[var(--color-walnut)] mb-6 text-center">Do you have a preferred wood species?</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <h3 className="font-serif text-xl md:text-2xl text-[var(--color-walnut)] mb-4 md:mb-6 text-center">Do you have a preferred wood species?</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
                           {['Black Walnut', 'Pecky Cypress', 'White Oak', 'Honduran Mahogany', 'Undecided'].map((species) => (
                             <button
                               key={species}
+                              type="button"
                               onClick={() => { setFormData({ ...formData, woodSpecies: species }); nextStep(); }}
-                              className={`p-4 text-sm text-left rounded-xl border transition-all ${formData.woodSpecies === species ? 'border-[var(--color-cypress)] bg-[var(--color-cloud)]' : 'border-gray-200 hover:border-[var(--color-cypress)]'}`}
+                              className={`p-3 md:p-4 text-xs md:text-sm text-left rounded-xl border transition-all ${formData.woodSpecies === species ? 'border-[var(--color-cypress)] bg-[var(--color-cloud)]' : 'border-gray-200 hover:border-[var(--color-cypress)]'}`}
                             >
                               <span className="font-medium text-[var(--color-ink)]">{species}</span>
                             </button>
                           ))}
                         </div>
-                        <button onClick={prevStep} className="mt-8 flex items-center justify-center mx-auto gap-2 text-sm text-gray-500 hover:text-[var(--color-walnut)]">
+                        <button type="button" onClick={prevStep} className="mt-6 md:mt-8 flex items-center justify-center mx-auto gap-2 text-xs md:text-sm text-gray-500 hover:text-[var(--color-walnut)]">
                           <ArrowLeft className="w-4 h-4" /> Back
                         </button>
                       </motion.div>
@@ -146,19 +151,20 @@ export default function FloatingQuote() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
                       >
-                        <h3 className="font-serif text-2xl text-[var(--color-walnut)] mb-6 text-center">What is the scale of your project?</h3>
-                        <div className="grid grid-cols-1 gap-3">
+                        <h3 className="font-serif text-xl md:text-2xl text-[var(--color-walnut)] mb-4 md:mb-6 text-center">What is the scale of your project?</h3>
+                        <div className="grid grid-cols-1 gap-2 md:gap-3">
                           {['Single Room / Specific Piece', 'Full Home Renovation', 'New Residential Construction', 'Commercial Build-out'].map((scale) => (
                             <button
                               key={scale}
+                              type="button"
                               onClick={() => { setFormData({ ...formData, scale }); nextStep(); }}
-                              className={`p-4 text-sm text-center rounded-xl border transition-all ${formData.scale === scale ? 'border-[var(--color-cypress)] bg-[var(--color-cloud)]' : 'border-gray-200 hover:border-[var(--color-cypress)]'}`}
+                              className={`p-3 md:p-4 text-xs md:text-sm text-center rounded-xl border transition-all ${formData.scale === scale ? 'border-[var(--color-cypress)] bg-[var(--color-cloud)]' : 'border-gray-200 hover:border-[var(--color-cypress)]'}`}
                             >
                               <span className="font-medium text-[var(--color-ink)]">{scale}</span>
                             </button>
                           ))}
                         </div>
-                        <button onClick={prevStep} className="mt-8 flex items-center justify-center mx-auto gap-2 text-sm text-gray-500 hover:text-[var(--color-walnut)]">
+                        <button type="button" onClick={prevStep} className="mt-6 md:mt-8 flex items-center justify-center mx-auto gap-2 text-xs md:text-sm text-gray-500 hover:text-[var(--color-walnut)]">
                           <ArrowLeft className="w-4 h-4" /> Back
                         </button>
                       </motion.div>
@@ -172,29 +178,29 @@ export default function FloatingQuote() {
                         exit={{ opacity: 0, x: -20 }}
                         onSubmit={handleSubmit}
                       >
-                        <h3 className="font-serif text-2xl text-[var(--color-walnut)] mb-6 text-center">Final Details</h3>
-                        <div className="space-y-4">
-                          <div className="grid md:grid-cols-2 gap-4">
+                        <h3 className="font-serif text-xl md:text-2xl text-[var(--color-walnut)] mb-4 md:mb-6 text-center">Final Details</h3>
+                        <div className="space-y-3 md:space-y-4">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                             <div>
-                              <label className="block text-xs uppercase tracking-[0.1em] text-gray-500 mb-2">Name</label>
-                              <input required type="text" className="w-full p-3 rounded-lg border border-gray-200 focus:border-[var(--color-cypress)] focus:ring-0 outline-none transition-colors text-sm" />
+                              <label className="block text-[10px] md:text-xs uppercase tracking-[0.1em] text-gray-500 mb-1 md:mb-2">Name</label>
+                              <input required type="text" className="w-full p-2.5 md:p-3 rounded-lg border border-gray-200 focus:border-[var(--color-cypress)] focus:ring-0 outline-none transition-colors text-xs md:text-sm" />
                             </div>
                             <div>
-                              <label className="block text-xs uppercase tracking-[0.1em] text-gray-500 mb-2">Email</label>
-                              <input required type="email" className="w-full p-3 rounded-lg border border-gray-200 focus:border-[var(--color-cypress)] focus:ring-0 outline-none transition-colors text-sm" />
+                              <label className="block text-[10px] md:text-xs uppercase tracking-[0.1em] text-gray-500 mb-1 md:mb-2">Email</label>
+                              <input required type="email" className="w-full p-2.5 md:p-3 rounded-lg border border-gray-200 focus:border-[var(--color-cypress)] focus:ring-0 outline-none transition-colors text-xs md:text-sm" />
                             </div>
                           </div>
                           <div>
-                            <label className="block text-xs uppercase tracking-[0.1em] text-gray-500 mb-2">Project Details</label>
-                            <textarea rows={3} className="w-full p-3 rounded-lg border border-gray-200 focus:border-[var(--color-cypress)] focus:ring-0 outline-none transition-colors resize-none text-sm"></textarea>
+                            <label className="block text-[10px] md:text-xs uppercase tracking-[0.1em] text-gray-500 mb-1 md:mb-2">Project Details</label>
+                            <textarea rows={2} className="w-full p-2.5 md:p-3 rounded-lg border border-gray-200 focus:border-[var(--color-cypress)] focus:ring-0 outline-none transition-colors resize-none text-xs md:text-sm"></textarea>
                           </div>
 
-                          <div className="flex flex-col sm:flex-row items-center justify-between pt-6 gap-4 border-t border-gray-100 mt-6">
-                            <button type="button" onClick={prevStep} className="flex items-center gap-2 text-sm text-gray-500 hover:text-[var(--color-walnut)] order-2 sm:order-1">
-                              <ArrowLeft className="w-4 h-4" /> Back
+                          <div className="flex flex-col sm:flex-row items-center justify-between pt-4 md:pt-6 gap-3 md:gap-4 border-t border-gray-100 mt-4 md:mt-6">
+                            <button type="button" onClick={prevStep} className="flex items-center gap-2 text-xs md:text-sm text-gray-500 hover:text-[var(--color-walnut)] order-2 sm:order-1 outline-none">
+                              <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" /> Back
                             </button>
-                            <button type="submit" className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[var(--color-walnut)] text-white px-8 py-4 rounded-full text-xs tracking-[0.2em] uppercase transition-all hover:bg-[var(--color-cypress)] order-1 sm:order-2">
-                              Submit Inquiry <ArrowRight className="w-4 h-4" />
+                            <button type="submit" className="w-full sm:w-auto flex items-center justify-center gap-2 md:gap-3 bg-[var(--color-walnut)] text-white px-6 md:px-8 py-3 md:py-4 rounded-full text-[10px] md:text-xs tracking-[0.2em] uppercase transition-all hover:bg-[var(--color-cypress)] order-1 sm:order-2 outline-none">
+                              Submit Inquiry <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
                             </button>
                           </div>
                         </div>
@@ -206,18 +212,19 @@ export default function FloatingQuote() {
                         key="step5"
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="text-center py-8"
+                        className="text-center py-6 md:py-8"
                       >
-                        <div className="w-16 h-16 bg-[var(--color-cloud)] rounded-full flex items-center justify-center mx-auto mb-6 text-[var(--color-cypress)]">
-                          <CheckCircle2 className="w-8 h-8" />
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-[var(--color-cloud)] rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-[var(--color-cypress)]">
+                          <CheckCircle2 className="w-6 h-6 md:w-8 md:h-8" />
                         </div>
-                        <h3 className="font-serif text-3xl text-[var(--color-walnut)] mb-4">Request Received</h3>
-                        <p className="text-sm text-gray-600 max-w-sm mx-auto mb-8">
+                        <h3 className="font-serif text-2xl md:text-3xl text-[var(--color-walnut)] mb-3 md:mb-4">Request Received</h3>
+                        <p className="text-xs md:text-sm text-gray-600 max-w-sm mx-auto mb-6 md:mb-8 leading-relaxed">
                           Our master craftsman will review your project details and contact you within 48 hours.
                         </p>
                         <button 
+                          type="button"
                           onClick={closeForm}
-                          className="bg-gray-100 text-[var(--color-ink)] px-8 py-3 rounded-full text-xs tracking-[0.2em] uppercase transition-all hover:bg-gray-200 font-medium"
+                          className="bg-gray-100 text-[var(--color-ink)] px-6 md:px-8 py-3 rounded-full text-[10px] md:text-xs tracking-[0.2em] uppercase transition-all hover:bg-gray-200 font-medium outline-none"
                         >
                           Close Window
                         </button>
