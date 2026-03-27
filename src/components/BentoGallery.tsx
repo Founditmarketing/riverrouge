@@ -71,17 +71,16 @@ export default function BentoGallery() {
           </a>
 
           {/* Office Cabinets */}
-          <a href="/services/commercial" className="group block relative rounded-3xl overflow-hidden md:col-span-3 h-[400px]">
+          <a href="/services/commercial" className="group block relative rounded-3xl overflow-hidden">
             <img
               src="/live_office_cabinets.png"
               alt="Commercial Office Cabinets"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
-              <span className="text-[var(--color-cypress)] text-xs tracking-[0.2em] uppercase mb-3">Commercial</span>
-              <h3 className="font-serif text-3xl lg:text-4xl text-white mb-3">Executive Office Buildout</h3>
-              <p className="text-white/70 font-light max-w-xl text-lg">Scalable precision cabinetry delivered and installed for corporate office environments, ensuring both durability and design excellence.</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
+              <span className="text-[var(--color-cypress)] text-xs tracking-[0.2em] uppercase mb-2">Commercial</span>
+              <h3 className="font-serif text-2xl text-white">Executive Office Buildout</h3>
             </div>
           </a>
 
