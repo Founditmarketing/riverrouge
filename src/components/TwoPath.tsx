@@ -61,7 +61,7 @@ export default function TwoPath() {
             <div className="aspect-[4/3] overflow-hidden relative">
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 z-10 pointer-events-none" />
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+                src="/riverrougeprocesshero.jpeg"
                 alt="Residential Millwork"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 referrerPolicy="no-referrer"
