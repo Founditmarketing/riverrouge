@@ -84,9 +84,9 @@ export default function SpeciesGuide() {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2">
-            <div className="aspect-square rounded-full overflow-hidden relative shadow-2xl p-4 bg-white">
-              <div className="w-full h-full rounded-full overflow-hidden relative">
+          <div className="w-full lg:w-1/2 max-w-[400px] mx-auto lg:max-w-none lg:mx-0">
+            <div className="relative w-full aspect-square rounded-full shadow-2xl bg-white">
+              <div className="absolute inset-3 sm:inset-4 rounded-full overflow-hidden isolate bg-gray-100">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={activeSpecies.id}
@@ -103,7 +103,7 @@ export default function SpeciesGuide() {
               </div>
 
               {/* Decorative ring */}
-              <div className="absolute inset-0 border-[1px] border-[var(--color-cypress)]/30 rounded-full m-8 pointer-events-none"></div>
+              <div className="absolute inset-6 sm:inset-8 border-[1px] border-[var(--color-cypress)]/30 rounded-full pointer-events-none"></div>
             </div>
           </div>
 
