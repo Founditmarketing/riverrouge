@@ -73,18 +73,6 @@ export default function Preloader() {
               </h2>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              className="flex flex-col items-center mt-6"
-            >
-              <p className="text-white/70 font-medium text-[10px] md:text-xs uppercase tracking-[0.15em] text-center leading-loose md:leading-normal">
-                <span className="block md:inline">Exceptional Craftsmanship.</span>
-                <span className="hidden md:inline"> </span>
-                <span className="block md:inline">Uncompromising Precision.</span>
-              </p>
-            </motion.div>
           </div>
         </motion.div>
       )}
