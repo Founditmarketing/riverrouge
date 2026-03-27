@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
 
 const cabinetImages = [
-  "live_custom_cabinetry_1.jpeg",
+  "riverrougekitchencabinetsafter2.jpg",
   "live_custom_cabinetry_2.jpeg",
   "live_office_cabinets.png",
   "live_large_office_storage.png"
