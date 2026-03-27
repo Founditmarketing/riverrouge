@@ -67,8 +67,10 @@ export default function Preloader() {
               transition={{ duration: 1, delay: 0.8 }}
               className="flex flex-col items-center mt-8"
             >
-              <p className="text-white/70 font-medium text-xs uppercase tracking-[0.15em] text-center">
-                Exceptional Craftsmanship. Uncompromising Precision.
+              <p className="text-white/70 font-medium text-[10px] md:text-xs uppercase tracking-[0.15em] text-center leading-loose md:leading-normal">
+                <span className="block md:inline">Exceptional Craftsmanship.</span>
+                <span className="hidden md:inline"> </span>
+                <span className="block md:inline">Uncompromising Precision.</span>
               </p>
             </motion.div>
           </div>
