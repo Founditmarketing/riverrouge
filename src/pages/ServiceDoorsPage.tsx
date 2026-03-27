@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const galleryImages = [
   "live_handcrafted_door.jpeg",
@@ -17,8 +15,6 @@ export default function ServiceDoorsPage() {
 
   return (
     <div className="min-h-screen bg-[var(--color-cloud)] selection:bg-[var(--color-cypress)] selection:text-white">
-      <Header />
-      
       {/* Slim Hero */}
       <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-[var(--color-walnut)] pt-16">
         <div
@@ -118,7 +114,6 @@ export default function ServiceDoorsPage() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+      </div>
   );
 }

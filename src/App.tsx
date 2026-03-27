@@ -45,7 +45,6 @@ function GlobalClickHandler() {
 function HomePage() {
   return (
     <div className="min-h-screen bg-[var(--color-cloud)] selection:bg-[var(--color-cypress)] selection:text-white">
-      <Header />
       <main>
         <Hero />
         <TwoPath />
@@ -55,7 +54,6 @@ function HomePage() {
         <Process />
         <QuoteForm />
       </main>
-      <Footer />
     </div>
   );
 }
@@ -64,10 +62,13 @@ export default function App() {
   return (
     <>
       <Preloader />
+      <div className="min-h-screen bg-[var(--color-cloud)] selection:bg-[var(--color-cypress)] selection:text-white">
       <Router>
         <GlobalClickHandler />
+        <Header />
         <FloatingQuote />
-        <Routes>
+        <main>
+          <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/process" element={<ProcessPage />} />
@@ -79,7 +80,10 @@ export default function App() {
         <Route path="/services/trimming-mold" element={<ServiceTrimmingMoldPage />} />
         <Route path="/services/custom-builds" element={<ServiceCustomBuildsPage />} />
       </Routes>
+      </main>
+      <Footer />
     </Router>
+    </div>
     </>
   );
 }

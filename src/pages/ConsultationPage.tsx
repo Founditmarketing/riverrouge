@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, ArrowLeft, CheckCircle2, Phone, Mail, MapPin } from 'lucide-react';
-import Header from '../components/Header';
 
 export default function ConsultationPage() {
   const [step, setStep] = useState(1);
@@ -28,8 +27,6 @@ export default function ConsultationPage() {
 
   return (
     <div className="min-h-screen bg-white selection:bg-[var(--color-cypress)] selection:text-white flex flex-col md:flex-row">
-      <Header />
-      
       {/* Left Side - Visuals & Contact Info */}
       <div className="w-full md:w-5/12 lg:w-1/2 relative min-h-[50vh] md:min-h-screen flex flex-col justify-end p-8 md:p-16 lg:p-24 pt-32">
         <div 

@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { ArrowRight } from 'lucide-react';
 
 const processSteps = [
@@ -138,8 +136,6 @@ export default function ProcessPage() {
 
   return (
     <div className="min-h-screen bg-[var(--color-cloud)] selection:bg-[var(--color-cypress)] selection:text-white">
-      <Header />
-      
       {/* Slim Hero matching Service Pages exact template */}
       <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-[var(--color-walnut)] pt-16">
         <div
@@ -213,7 +209,6 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+      </div>
   );
 }
